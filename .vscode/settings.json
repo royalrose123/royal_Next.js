@@ -1,0 +1,9 @@
+{
+    "vetur.grammar.customBlocks": {
+    
+    },
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+      }
+}
