@@ -1,0 +1,55 @@
+{
+  "devFiles": [],
+  "lowPriorityFiles": [
+    "static/JlTfQgBqZntBYCXC2fvLq/_buildManifest.js",
+    "static/JlTfQgBqZntBYCXC2fvLq/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/_app": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/_polyfills": [
+      "static/runtime/polyfills-c9956edb9c39103b4559.js"
+    ],
+    "/about": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/book": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/book/[id]": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/css/b29278a24ec7d247f9e1.css",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-c212667a5f965e81e004.js",
+      "static/chunks/framework.cd7b536806ce9fae3835.js",
+      "static/chunks/commons.6c5b5b9beae3cf875002.js",
+      "static/runtime/main-2c6b61de709b1181f7b4.js"
+    ]
+  }
+}

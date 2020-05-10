@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = {"/book/[id]":["static\u002Fcss\u002Fb29278a24ec7d247f9e1.css"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
