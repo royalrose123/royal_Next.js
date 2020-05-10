@@ -5,7 +5,7 @@ import styles from './style.module.scss'
 import classnames from 'classnames/bind'
 
 // components
-import Navigation from '../components/Navigation'
+import Navigation from '@/components/Navigation'
 
 export const propTypes = {
   children: PropTypes.object,

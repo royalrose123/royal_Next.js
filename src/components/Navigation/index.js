@@ -4,7 +4,7 @@ import styles from './style.module.scss'
 import classnames from 'classnames/bind'
 
 // components
-import Menu from '../Menu'
+import Menu from '@/components/Menu'
 
 export const propTypes = {
   navigations: PropTypes.array,
