@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 // import MyApp from './_app'
 
-export default () => {
+export default function Index() {
   const router = useRouter()
   const { pathname } = router
 
