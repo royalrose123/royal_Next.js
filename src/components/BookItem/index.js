@@ -20,7 +20,6 @@ function BookItem(props) {
   const router = useRouter()
 
   const onButtonClick = () => {
-    console.log('id', id)
     router.push(`/home/book/${id}`)
   }
 
@@ -30,7 +29,9 @@ function BookItem(props) {
       <p className={cx('book-item__context')}>name : {name}</p>
       <p className={cx('book-item__context')}>price : {price}</p>
       <p className={cx('book-item__context')}>rent_price : {rentPrice}</p>
-      <Button onClick={onButtonClick}>Read More</Button>
+      <div className={cx('book-item__button')}>
+        <Button onClick={onButtonClick}>Read More</Button>
+      </div>
     </div>
   )
 }
