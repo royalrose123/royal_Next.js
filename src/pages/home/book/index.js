@@ -1,23 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import fetch from 'node-fetch'
+import styles from './style.module.scss'
+import classnames from 'classnames/bind'
+
+// components
+import BookItem from '@/components/BookItem'
 
 export const propTypes = {
   books: PropTypes.array,
 }
 
 function Book(props) {
+  const cx = classnames.bind(styles)
+
   const { books } = props
 
   return (
-    <>
-      <p>Book </p>
-      <div>
-        {books.map((book, index) => (
-          <div key={index}>{book.name}</div>
-        ))}
-      </div>
-    </>
+    <div className={cx('book')}>
+      {books.map((book, index) => (
+        <BookItem book={book} key={index} />
+      ))}
+    </div>
   )
 }
 
