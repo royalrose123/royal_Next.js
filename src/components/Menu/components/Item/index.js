@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import styles from './style.module.scss'
 import classnames from 'classnames/bind'
+import { useRouter } from 'next/router'
 
 export const propTypes = {
   name: PropTypes.string,
@@ -14,10 +15,19 @@ function Item(props) {
 
   const { name, path } = props
 
+  const router = useRouter()
+  const { pathname } = router
+
+  const currentPath = `/home/${path}`
+  // const isCurrentPath = pathname === currentPath
+  const isCurrentPath = pathname.includes(currentPath)
+
   return (
     <div className={cx('item')}>
-      <Link href={`/home/${path}`}>
-        <a className={cx('item__link')}>{name}</a>
+      <Link href={currentPath}>
+        <a className={cx('item__link')} data-is-actived={isCurrentPath}>
+          {name}
+        </a>
       </Link>
     </div>
   )

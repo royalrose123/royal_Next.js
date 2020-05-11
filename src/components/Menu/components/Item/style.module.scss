@@ -14,5 +14,9 @@ $item-height: 44px;
        height: 100%;
        text-align: center;
        line-height: $item-height;
+
+       &[data-is-actived=true]{
+           color: blue;
+       }
     }
 }
