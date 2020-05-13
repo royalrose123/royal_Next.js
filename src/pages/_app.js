@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import '../styles/main.scss'
+
+// styles
+import '@/styles/main.scss'
 
 // Components
-import Layout from '../layouts/layout'
+import DefaultLayout from '@/layouts/layout'
 
 export const propTypes = {
   Component: PropTypes.func,
   pageProps: PropTypes.object,
 }
 
-// This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
+  const Layout = Component.Layout || DefaultLayout
+
   return (
     <>
       <Layout>

@@ -8,6 +8,7 @@ import classnames from 'classnames/bind'
 export const propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export const defaultProps = {
@@ -17,10 +18,10 @@ export const defaultProps = {
 function Button(props) {
   const cx = classnames.bind(styles)
 
-  const { children, type, ...restProps } = props
+  const { children, className, type, ...restProps } = props
 
   return (
-    <button className={cx('button')} data-type={type} {...restProps}>
+    <button className={cx('button', className)} data-type={type} {...restProps}>
       {children}
     </button>
   )
