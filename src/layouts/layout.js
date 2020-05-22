@@ -25,6 +25,18 @@ function Layout(props) {
       name: 'About',
       path: 'about',
     },
+    {
+      name: 'Test',
+      path: 'test',
+    },
+    {
+      name: 'Person',
+      path: 'person',
+    },
+    {
+      name: 'Vehicle',
+      path: 'vehicle',
+    },
   ]
 
   return (

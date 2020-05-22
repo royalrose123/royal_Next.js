@@ -21,7 +21,7 @@ function About(props) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ res }) {
   // Call an external API endpoint to get posts
   const booksResponse = await fetch('http://127.0.0.1:8000/api/books')
   const SSRbooks = await booksResponse.json()
