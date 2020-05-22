@@ -19,7 +19,6 @@ function Item(props) {
   const { pathname } = router
 
   const currentPath = `/home/${path}`
-  // const isCurrentPath = pathname === currentPath
   const isCurrentPath = pathname.includes(currentPath)
 
   return (
