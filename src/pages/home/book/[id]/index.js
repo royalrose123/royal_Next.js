@@ -15,6 +15,8 @@ function Book(props) {
 
   const router = useRouter()
 
+  // console.log('router.isFallback', router.isFallback)
+
   if (router.isFallback) {
     return <div>Loading...</div>
   }
@@ -38,19 +40,15 @@ export async function getStaticPaths() {
     params: { id: String(post.id) },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: true } // { fallback: false } means other routes should 404.
 }
 
 export async function getStaticProps({ params }) {
-  const booksResponse = await fetch('http://127.0.0.1:8000/api/books')
-  const books = await booksResponse.json()
-
   const bookResponse = await fetch(`http://127.0.0.1:8000/api/book/${params.id}`)
   const book = await bookResponse.json()
 
   return {
     props: {
-      books,
       book,
     },
   }
