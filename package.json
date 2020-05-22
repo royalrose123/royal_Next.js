@@ -4,12 +4,18 @@
   "private": true,
   "scripts": {
     "start": "next start",
-    "dev": "next dev",
-    "build": "next build"
+    "dev": "node ./database-test.js && next dev",
+    "dev:dev": "TEST=dev next dev",
+    "dev:sit": "TEST=sit next dev",
+    "build": "node ./database-test.js && next build"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
+    "bcrypt": "^4.0.1",
     "classnames": "^2.2.6",
+    "cookie": "^0.4.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-react-app": "^5.2.1",
@@ -25,11 +31,17 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-plugin-standard": "^4.0.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
     "next": "^9.3.6",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sass": "^1.26.5"
+    "sqlite": "^4.0.7",
+    "sqlite3": "^4.2.0",
+    "swr": "^0.2.0"
   }
 }
