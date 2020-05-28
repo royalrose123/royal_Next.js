@@ -38,5 +38,6 @@ module.exports = {
         "semi": false,
       }
     ],
+    "react/react-in-jsx-scope": "off",
   }
 };
