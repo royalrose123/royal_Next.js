@@ -5,8 +5,8 @@
   "scripts": {
     "start": "next start",
     "dev": "node ./database-test.js && next dev",
-    "dev:dev": "TEST=dev next dev",
-    "dev:sit": "TEST=sit next dev",
+    "dev:dev": "TEST=dev ENV_KEY=dev next dev",
+    "dev:sit": "TEST=sit ENV_KEY=sit next dev",
     "build": "node ./database-test.js && TEST=build next build"
   },
   "dependencies": {
