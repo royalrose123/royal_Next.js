@@ -1,6 +1,13 @@
-.book{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  min-width: 1328px;
+.book {
+
+  &-header {
+    padding: 16px;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 1240px;
+  }
 }

@@ -28,6 +28,7 @@ export default async function login(req, res) {
           path: '/',
         }),
       )
+
       res.json({ message: 'OK', statusCode: '0000' })
     } else {
       res.json({ message: 'Something wrong!', statusCode: '9999' })

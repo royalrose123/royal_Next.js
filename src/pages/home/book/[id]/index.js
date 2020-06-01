@@ -15,8 +15,6 @@ function Book(props) {
 
   const router = useRouter()
 
-  // console.log('router.isFallback', router.isFallback)
-
   if (router.isFallback) {
     return <div>Loading...</div>
   }

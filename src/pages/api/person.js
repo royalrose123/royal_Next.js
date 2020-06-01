@@ -1,4 +1,5 @@
-import { withAuth } from '@/utils/withAuth'
+// import { withAuth } from '@/utils/withAuth'
+
 const sqlite = require('sqlite')
 const sqlite3 = require('sqlite3')
 
@@ -13,4 +14,4 @@ export const getPeople = async (req, res) => {
   res.json(people)
 }
 
-export default withAuth(getPeople)
+export default getPeople

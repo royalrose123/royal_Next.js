@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from './style.module.scss'
 import classnames from 'classnames/bind'
 import fetch from 'isomorphic-unfetch'
@@ -36,7 +36,6 @@ export function Login(props) {
 
     if (data.statusCode === '0000') Router.push('/home')
 
-    console.log('json 000000', data)
     setResponse(data.message)
   }
 

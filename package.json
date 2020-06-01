@@ -7,7 +7,7 @@
     "dev": "node ./database-test.js && next dev",
     "dev:dev": "TEST=dev next dev",
     "dev:sit": "TEST=sit next dev",
-    "build": "node ./database-test.js && next build"
+    "build": "node ./database-test.js && TEST=build next build"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -43,5 +43,6 @@
     "sqlite": "^4.0.7",
     "sqlite3": "^4.2.0",
     "swr": "^0.2.0"
-  }
+  },
+  "devDependencies": {}
 }
