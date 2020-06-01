@@ -1,26 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import fetch from 'node-fetch'
-import useSWR from 'swr'
+// import useSWR from 'swr'
+import { useBookList } from '@/computedValues/useBookList'
 
 export const propTypes = {
   SSRbooks: PropTypes.array,
 }
 
-const fetcher = (url) => fetch(url).then((r) => r.json())
-
 function About(props) {
   const { SSRbooks } = props
 
-  const { data } = useSWR('http://127.0.0.1:8000/api/books', fetcher)
+  const { bookList } = useBookList()
 
-  console.log('data', data)
+  console.log('bookList', bookList)
 
   return (
     <>
       <p>ABOUT</p>
-      <p>process.env.TEST: {process.env.TEST}</p>
-      <p>process.env.API_KEY: {process.env.API_KEY}</p>
       <div>
         {SSRbooks.map((book, index) => (
           <div key={index}>{book.name}</div>
