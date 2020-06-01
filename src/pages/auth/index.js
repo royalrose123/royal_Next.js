@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styles from './style.module.scss'
 import classnames from 'classnames/bind'
 import fetch from 'isomorphic-unfetch'
-// import getConfig from 'next/config'
+import Router from 'next/router'
+import Cookies from 'js-cookie'
 
 // Lib MISC
 
@@ -23,10 +24,7 @@ export function Auth(props) {
   }
 
   const onConfirmClick = async () => {
-    console.log('username 11111', username)
-    console.log('password 22222', password)
-
-    const response = await fetch('/api/auth', {
+    const response = await fetch('http://127.0.0.1:8000/api/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,9 +32,11 @@ export function Auth(props) {
       body: JSON.stringify({ username: username, password: password }),
     })
 
-    const json = await response.json()
+    const data = await response.json()
 
-    console.log('json 000000', json)
+    Cookies.set('token', data.token, { expires: 1 })
+
+    if (data.token) Router.push('/home')
   }
 
   return (
