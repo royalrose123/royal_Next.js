@@ -8,5 +8,4 @@ module.exports = {
   jsxSingleQuote: true, // JSX 語法的參數是否為單引號
   endOfLine: "auto", // 定義換行符號，支持 lf、cr 和 crlf
   semi: false, // 是否使用分號，預設為 true
-  arrowParens: true,
 };
