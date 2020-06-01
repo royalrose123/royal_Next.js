@@ -1,19 +1,13 @@
-const path = require('path')
-
 module.exports = {
-  webpack: (config, { buildId, dev }) => {
-    const newConfig = {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          '@': path.resolve(__dirname, '../src'),
-        },
-      },
-    }
+  env: {
+    TEST: process.env.TEST,
+    API_KEY: process.env.API_KEY,
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//))
 
-    return newConfig
+    // console.log('config 22222', config)
+    return config
   },
   webpackDevMiddleware: (config) => {
     return config
