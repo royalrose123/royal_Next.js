@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Head from 'next/head'
+
 import styles from './style.module.scss'
 import classnames from 'classnames/bind'
 
@@ -37,14 +37,14 @@ function Layout(props) {
       name: 'Vehicle',
       path: 'vehicle',
     },
+    {
+      name: 'Dynamic',
+      path: 'dynamic',
+    },
   ]
 
   return (
     <>
-      <Head>
-        <title>Royal</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
       <div className={cx('layout')}>
         <div className={cx('layout__header')} />
         <div className={cx('layout__main')}>
