@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-// import Cookies from 'js-cookie'
-// import Router from 'next/router'
+import Cookies from 'js-cookie'
+import Router from 'next/router'
+import { useGlobalReducer, GlobalReducerContext } from '@/globalState'
 
 // styles
 import '@/styles/main.scss'
@@ -18,23 +19,25 @@ export const propTypes = {
 export default function MyApp({ Component, pageProps }) {
   const Layout = Component.Layout ?? DefaultLayout
 
-  // const token = Cookies.get('token')
+  const token = Cookies.get('token')
 
-  // useEffect(() => {
-  //   if (!token) {
-  //     Router.push('/auth')
-  //   }
-  // }, [token])
+  useEffect(() => {
+    if (!token) {
+      Router.push('/auth')
+    }
+  }, [token])
 
   return (
     <>
-      <Head>
-        <title>Royal</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <GlobalReducerContext.Provider value={useGlobalReducer()}>
+        <Head>
+          <title>Royal</title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </GlobalReducerContext.Provider>
     </>
   )
 }
